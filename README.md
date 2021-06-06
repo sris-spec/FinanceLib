@@ -1,2 +1,1 @@
-# pip-library
-This repo consists of all that we have done so far
+AS OF NOW THIS REPOSITORY HAS ALL THOSE CODES THAT WILL BE COMPILING TOGETHER TO MAKE THE PIP LIBRARY
