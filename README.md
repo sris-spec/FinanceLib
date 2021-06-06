@@ -1,2 +1,2 @@
 # pip-library
-This repo consists of all that we have done so far
+This repository so far consists of all the code files that will later be combined to form the pip library.
