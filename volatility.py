@@ -21,5 +21,5 @@ def volatility(symbol):
     ax2 = data['Close'].plot(ax=ax, secondary_y=True, alpha=.3)
     ax.set_ylabel("ATR")
     ax2.set_ylabel("Price")
-symbol=input()
+symbol=input()# Sample input: GOOG
 v=volatility(symbol)
