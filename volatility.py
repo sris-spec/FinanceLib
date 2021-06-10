@@ -1,4 +1,3 @@
-#Volatility
 import numpy as np
 import pandas_datareader as pdr
 import datetime as dt
