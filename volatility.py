@@ -22,6 +22,5 @@ def volatility(symbol):
     ax.set_ylabel("ATR")
     ax2.set_ylabel("Price")
     plt.show()
-    
-symbol=input()# Sample input: GOOG
+symbol=input()
 v=volatility(symbol)
