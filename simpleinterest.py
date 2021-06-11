@@ -62,9 +62,9 @@ def ratio(P,R,T):
     plt.show() 
 
 
-# P=float(input("Principal amount is:"))
-# R=float(input("Rate of interest per annum is:"))
-# T=int(input("time:"))
-# x=SIgraph(P,R,T)
-# y=moneygraph(P,R,T)
-# z=ratio(P,R,T)
+#P=float(input("Principal amount is:"))
+#R=float(input("Rate of interest per annum is:"))
+#T=int(input("time:"))
+#x=SIgraph(20000,5,10)
+#y=moneygraph(20000,5,10)
+#z=ratio(20000,5,10)
