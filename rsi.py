@@ -24,6 +24,6 @@ def rsi(symbol,name):
     ax2.axhline(70, color='r', linestyle='--')
     ax2.set_ylabel('RSI')
     plt.show()
-symbol=input()
-name=input()
+symbol=input()# sample input: GOOG
+name=input()# sample input: Google
 r=rsi(symbol,name)
