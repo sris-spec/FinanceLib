@@ -1,7 +1,23 @@
 import matplotlib.pyplot as plt
-import math
 
-def EMI(principal,rate,tenure):
+def EMI(principal :int,rate :float,tenure :int) ->None:
+    
+    """
+    Calculates and visualises Equated Monthly Interest(EMI)
+
+    Parameters:
+      principal(float) : principal amount 
+      rate(float) : Rate of interest
+      tenure(int) : number of years for which EMI has to be calculated
+
+    Return:
+      The function has void return type.
+
+    Example:
+       EMI(500000,10.5,2)
+
+    """
+
     rate = rate/(12*100) #rate of interest 
     tenure = tenure * 12 # no of months
     emi = round((principal * rate * pow(1+rate,tenure))/(pow(1+rate,tenure)-1),0)
@@ -62,7 +78,3 @@ def EMI(principal,rate,tenure):
     table.set_fontsize(10)
     table.scale(2,2)
     plt.show()
-    
-
-    
-# Example - EMI(500000,10.5,2)
