@@ -8,10 +8,10 @@ def rsi(symbol :str ,name :str) -> None :
     Calculates and visualises the Relative Stock Index on a Stock
 
     Parameters:
-        symbol(str) : Symbol of the companies from  https://in.finance.yahoo.com/
+        symbol(str) : Symbol of the company from  https://in.finance.yahoo.com/
         name(str) : Name of the company
     Returns:
-        This function does not return anything   
+        Return type: void   
 
     """
     ticker : str = pdr.get_data_yahoo(symbol, dt.datetime(2019,1,1), dt.datetime.now())
