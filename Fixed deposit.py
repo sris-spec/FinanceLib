@@ -1,24 +1,45 @@
 import matplotlib.pyplot as plt
 
-def fd(P,R,T,freq):
+def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
     
-    fd_amount=P
+    
+    """
+    Calculates and Visualises Fixed Deposit(FD)
+    
+    Parameters:
+     Principle(int) : FD Amount
+     Rate(float) : Rate of Interest(in percentage)
+     Time(int) : Number of years for which Fd is created
+     freq(str) : The frequency in which compound interest should be calculated.
+                 The values can be from the list: ("Yearly","Quaterly","Monthly")
+     
+    Return:
+     The function has void return type.
+      
+    Example:
+     FD(50000,10.5,5,Yearly)
+     
+     """
+     
+    #Required list for plotting Graph and pie chart
+    fd_amount=Principle
     closing_balance=[]
     interest_data=[]
     year=[]
     
    
-    if(freq == "YEARLY" or freq== "Yearly" or freq=="yearly"):
+    if(freq== "Yearly"):
 
         for i in range(T):
-            a=P*(1+R/100)**1
+            a=Principle*(1+Rate/100)**1
             year.append(i+1)
             closing_balance.append(a)
-            interest_data.append(a-P)
-            P=a
+            interest_data.append(a-Principle)
+            Principle=a
             print("Interest Earned at the end of : ")
             print("Year {} is : {} ".format(i+1,round(interest_data[i])))
-
+            
+        #printing final data
         print("\n\n")
         print("Amount Deposited : ",fd_amount)
         print("Maturity Amount : ",round(closing_balance[-1]))
@@ -52,17 +73,18 @@ def fd(P,R,T,freq):
 
 
 
-    elif (freq == "Quaterly" or freq=="QUATERLY" or freq=="quaterly"):
+    elif (freq == "Quaterly"):
 
         for i in range(T):
-            a=P*(1+R/400)**4
+            a=Principle*(1+Rate/400)**4
             year.append(i+1)
             closing_balance.append(a)
-            interest_data.append(a-P)
-            P=a
+            interest_data.append(a-Principle)
+            Principle=a
             print("Interest Earned at the end of : ")
             print("Year {} is : {} ".format(i+1,round(interest_data[i])))
-
+            
+        #printing final data
         print("\n\n")
         print("Amount Deposited : ",fd_amount)
         print("Maturity Amount : ",round(closing_balance[-1]))
@@ -97,18 +119,18 @@ def fd(P,R,T,freq):
 
 
 
-    elif (freq == "Monthly" or freq=="monthly" or freq=="MONTHLY"):
+    elif (freq == "Monthly"):
         for i in range(T):
-            a=P*(1+R/1200)**12
+            a=Principle*(1+Rate/1200)**12
             year.append(i+1)
             closing_balance.append(a)
-            interest_data.append(a-P)
-            P=a
+            interest_data.append(a-Principle)
+            Principle=a
 
             print("Interest Earned at the end of : ")
             print("Year {} is : {}".format(i+1,round(interest_data[i])))
             
-
+        #Printing final data
         print("\n\n")
         print("Amount Deposited : ",fd_amount)
         print("Maturity Amount : ",round(closing_balance[-1]))
@@ -143,10 +165,5 @@ def fd(P,R,T,freq):
 
 
 
-# p=int(input("Enter the fd deposit amount:"))
-# r=int(input("Enter the rate of interest:"))
-# t=int(input("Enter the time period:"))
-# freq=input("Enter the no of times deposit cummulated: ")
-# x=fd(p,r,t,freq)
 
    
