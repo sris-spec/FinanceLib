@@ -28,7 +28,16 @@
    * **EMI:**
    EMI (Equated Monthly Interest) is the amount payable every month to the bank or any other financial institution until the loan amount is fully paid off. The calculated interest is shown via bar graph and pie chart to represent monthly interest and principal. Also monthly details are represented in a table as per the input (principal amount, rate of interest in percentage and tenure) given.
    ### 3. Analysis:
-   
+   This module is further subdivided into two very important stock analysis  fuctions which are widely used in financial risk management.
+   * **rsi:**
+   The relative strength index (RSI) is a momentum indicator used in technical analysis that measures the magnitude of recent price changes to evaluate overbought or oversold conditions in the price of a stock or other asset. 
+   A technical indicator is a mathematical calculation based on past prices and volumes of a stock. The RSI has a value between 0 and 100. It is said to be overbought if above 70, and oversold if below 30.
+   * **volatility:**
+   Volatility is a statistical measure of the dispersion of returns for a given security or market index. In most cases, the higher the volatility, the riskier the security. Volatility is often measured as either the standard deviation or variance between returns from that same security or market index.
+   Here we will calculate the same by using the ATR value.
+   The average true range (ATR) is a market volatility indicator used in technical analysis.It is typically derived from the 14-day simple moving average of a series of true range indicators.
+  
+
   ### Installation
   ### Licence
   All the codes included in this packaging library is licensed under MIT License.
