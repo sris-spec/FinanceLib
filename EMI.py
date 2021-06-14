@@ -31,12 +31,16 @@ def EMI(principal :int,rate :float,tenure :int) ->None:
     print("Total Interest Payable: ",total_amt - principal)
     
     # plotting interest and principal in a pie chart
+    fig1, (ax1,ax2)= plt.subplots(2)
+    fig1.suptitle('EMI')
+    fig2,(ax3)=plt.subplots()
+    fig2.suptitle('Month-wise Details')
     x = [loan_amt,interest]
     mylabels = ("Principal Loan Amount","Interest")
     myexplode = [0,0.2]
-    plt.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode)
-    plt.legend()
-    plt.show()
+    ax1.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode)
+    ax2.legend()
+    
     
     # required lists for plotting graph and table
     interest_data=[]
@@ -60,21 +64,24 @@ def EMI(principal :int,rate :float,tenure :int) ->None:
         cell_text.append([i+1,month_principal,month_interest,prev_bal])
         
     # plotting bar graph
-    fig, ax = plt.subplots()
-    ax.bar(month_no, principal_data, width=0.35, label='Principal')
-    ax.bar(month_no, interest_data, width=0.35, bottom=principal_data,
+    
+    ax2.bar(month_no, principal_data, width=0.35, label='Principal')
+    ax2.bar(month_no, interest_data, width=0.35, bottom=principal_data,
        label='Interest')
-    ax.set_xlabel('Months')
-    ax.set_ylabel('EMI Payment')
-    ax.set_title('EMI Payment/month')
-    ax.legend()
-    plt.show()
+    ax2.set_xlabel('Months')
+    ax2.set_ylabel('EMI Payment')
+    ax2.set_title('EMI Payment/month')
+    ax2.legend()
+    
+    
     
     # Table creation
-    fig, ax=plt.subplots()
-    ax.set_axis_off()
-    table = ax.table(cellText= cell_text,colLabels=columns,loc='upper center',cellLoc='center')
-    ax.set_title('Month-wise Details')
+    
+    ax3.set_axis_off()
+    table = ax3.table(cellText= cell_text,colLabels=columns,loc='upper center',cellLoc='center')
+    
     table.set_fontsize(10)
     table.scale(2,2)
+    plt.tight_layout()
     plt.show()
+EMI(500000,10.5,2)    

@@ -27,10 +27,12 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
     interest_data=[]
     year=[]
     
-   
+    fig, (ax1,ax2,ax3)=plt.subplots(3)
+    fig.suptitle('Fixed Deposit')
+       
     if(freq== "Yearly"):
 
-        for i in range(T):
+        for i in range(Time):
             a=Principle*(1+Rate/100)**1
             year.append(i+1)
             closing_balance.append(a)
@@ -44,30 +46,33 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
         print("Amount Deposited : ",fd_amount)
         print("Maturity Amount : ",round(closing_balance[-1]))
         print("Interest Earned : ",round(sum(interest_data)))
-       
+        
        
         # Pie chart
         x=[fd_amount,sum(interest_data)]
         mylabels=("FD amount","Interest Earned")
         myexplode=[0,0.2]
-        plt.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode,shadow=True)
-        plt.legend()
-        plt.title("Yearly Cummulated")
-        plt.show()
+        ax1.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode,shadow=True)
+        ax1.legend()
+        ax1.set_title("Yearly Cummulated")
+        
 
 
         # Bar graph for Balance
-        plt.bar(year,closing_balance,color="#800000")
-        plt.title("FD Amount over the Year(Yearly)")
-        plt.xlabel("Years")
-        plt.ylabel("Balance")
-        plt.show()
+        ax2.bar(year,closing_balance,color="#800000")
+        ax2.set_title("FD Amount over the Year(Yearly)")
+        ax2.set_xlabel("Years")
+        ax2.set_ylabel("Balance")
+        
+        
 
         # Bar graph for interest 
-        plt.bar(year,interest_data)
-        plt.title("Interest earned over the Year(Yearly)")
-        plt.xlabel("Years")
-        plt.ylabel("Interest")
+        ax3.bar(year,interest_data)
+        ax3.set_title("Interest earned over the Year(Yearly)")
+        ax3.set_xlabel("Years")
+        ax3.set_xlabel("Interest")
+
+        plt.tight_layout()
         plt.show()
 
 
@@ -75,7 +80,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
 
     elif (freq == "Quaterly"):
 
-        for i in range(T):
+        for i in range(Time):
             a=Principle*(1+Rate/400)**4
             year.append(i+1)
             closing_balance.append(a)
@@ -96,31 +101,33 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
         x=[fd_amount,sum(interest_data)]
         mylabels=("FD amount","Interest Earned")
         myexplode=[0,0.2]
-        plt.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode,shadow=True)
-        plt.legend()
-        plt.title("Quaterly Cummulated")
-        plt.show()
+        ax1.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode,shadow=True)
+        ax1.legend()
+        ax1.set_title("Quaterly Cummulated")
+        
 
         
         # Bar graph for Balance
-        plt.bar(year,closing_balance,color="#800000")
-        plt.title("FD Amount over the Year(Quaterly)")
-        plt.xlabel("Years")
-        plt.ylabel("Balance")
-        plt.show()
+        ax2.bar(year,closing_balance,color="#800000")
+        ax2.set_title("FD Amount over the Year(Quaterly)")
+        ax2.set_xlabel("Years")
+        ax2.set_ylabel("Balance")
+        
 
 
         # Bar graph for interest 
         plt.bar(year,interest_data)
-        plt.title("Interest earned over the Year(Quaterly)")
-        plt.xlabel("Years")
-        plt.ylabel("Interest")
+        ax3.set_title("Interest earned over the Year(Quaterly)")
+        ax3.set_xlabel("Years")
+        ax3.set_ylabel("Interest")
+        plt.tight_layout()
         plt.show()
+        
 
 
 
     elif (freq == "Monthly"):
-        for i in range(T):
+        for i in range(Time):
             a=Principle*(1+Rate/1200)**12
             year.append(i+1)
             closing_balance.append(a)
@@ -141,25 +148,28 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
         x=[fd_amount,sum(interest_data)]
         mylabels=("FD amount","Interest Earned")
         myexplode=[0,0.2]
-        plt.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode,shadow=True)
-        plt.legend()
-        plt.title("Monthly Cummulated")
-        plt.show()
+        ax1.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode,shadow=True)
+        ax1.legend()
+        ax1.set_title("Monthly Cummulated")
+        
 
         # Bar graph for Balance
-        plt.bar(year,closing_balance,color="#800000")
-        plt.title("FD Amount over the Period(Monthly)")
-        plt.xlabel("Years")
-        plt.ylabel("Balance")
-        plt.show()
+        ax2.bar(year,closing_balance,color="#800000")
+        ax2.set_title("FD Amount over the Period(Monthly)")
+        ax2.set_xlabel("Years")
+        ax2.set_ylabel("Balance")
+        
 
 
         # Bar graph for interest 
-        plt.bar(year,interest_data)
-        plt.title("Interest earned over the Year(monthly)")
-        plt.xlabel("Years")
-        plt.ylabel("Interest")
+        ax3.bar(year,interest_data)
+        ax3.set_title("Interest earned over the Year(monthly)")
+        ax3.set_xlabel("Years")
+        ax3.set_ylabel("Interest")
+        plt.tight_layout()
         plt.show()
+FD(50000,10.5,5,'Yearly')        
+
 
 
 
