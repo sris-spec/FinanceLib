@@ -1,20 +1,23 @@
 from typing import List, Union
 import pandas_datareader as pdr
-import datetime as dt
+
 import matplotlib.pyplot as plt
 
-def rsi(symbol :str ,name :str) -> None :
+def rsi(symbol :str ,name :str, date :str) -> None :
     """
-    Calculates and visualises the Relative Stock Index on a Stock
+    Calculates and visualises the Relative Stock Index on a Stock of the company.
 
     Parameters:
         symbol(str) : Symbol of the company from  https://in.finance.yahoo.com/
         name(str) : Name of the company
+        date(str) : start date of historical data in the format (YYYY,M,D)
     Returns:
-        Return type: void   
+        Return type: void  
+    Example:
+        rsi('GOOG','Google','2020, 1, 1')     
 
     """
-    ticker : str = pdr.get_data_yahoo(symbol, dt.datetime(2019,1,1), dt.datetime.now())
+    ticker : str = pdr.get_data_yahoo(symbol, date)
     delta : List[float]  = ticker['Close'].diff()
     up : int   = delta.clip(lower=0)
     down : int = -1*delta.clip(upper=0)
@@ -35,6 +38,4 @@ def rsi(symbol :str ,name :str) -> None :
     ax2.axhline(70, color='r', linestyle='--')
     ax2.set_ylabel('RSI')
     plt.show()
-symbol=input()# sample input: GOOG
-name=input()# sample input: Google
-rsi(symbol,name)
+rsi('GOOG','Google','2020, 1, 1')

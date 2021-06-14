@@ -1,21 +1,23 @@
 from typing import List, Union
 import numpy as np
 import pandas_datareader as pdr
-import datetime as dt
+
 import pandas as pd
 import matplotlib.pyplot as plt
-def volatility(symbol :str) ->None:
+def volatility(symbol :str, date :str) ->None:
     """
     Measures and visualizes the Volatility of a Stock by calculating the Average True Range(ATR)
     Parameters:
         symbol(str) : Symbol of the company from  https://in.finance.yahoo.com/
-        
+        date(str) : start date of historical data in the format (YYYY,M,D)        
     Returns:
         Return type: void
+    Example:
+        volatility('GOOG','2020,1,1')    
 
     """
-    start : str = dt.datetime(2020, 1, 1)
-    data : str = pdr.get_data_yahoo(symbol, start)
+    
+    data : str = pdr.get_data_yahoo(symbol,date)
     data.head()
     high_low : Union[int,float]= data['High'] - data['Low']
     high_cp : List[float] = np.abs(data['High'] - data['Close'].shift())
@@ -32,5 +34,4 @@ def volatility(symbol :str) ->None:
     ax.set_ylabel("ATR")
     ax2.set_ylabel("Price")
     plt.show()
-symbol=input()
-v=volatility(symbol)
+volatility('GOOG','2020, 1, 1')

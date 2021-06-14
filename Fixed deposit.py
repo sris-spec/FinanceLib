@@ -1,3 +1,4 @@
+from typing import List
 import matplotlib.pyplot as plt
 
 def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
@@ -13,8 +14,8 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
      freq(str) : The frequency in which compound interest should be calculated.
                  The values can be from the list: ("Yearly","Quaterly","Monthly")
      
-    Return:
-     The function has void return type.
+    Returns:
+     Return type: void
       
     Example:
      FD(50000,10.5,5,Yearly)
@@ -22,10 +23,10 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
      """
      
     #Required list for plotting Graph and pie chart
-    fd_amount=Principle
-    closing_balance=[]
-    interest_data=[]
-    year=[]
+    fd_amount : int=Principle
+    closing_balance : List[float]=[]
+    interest_data : List[float]=[]
+    year :List[float]=[]
     
     fig, (ax1,ax2,ax3)=plt.subplots(3)
     fig.suptitle('Fixed Deposit')

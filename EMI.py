@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from typing import List
 
 def EMI(principal :int,rate :float,tenure :int) ->None:
     
@@ -18,15 +19,15 @@ def EMI(principal :int,rate :float,tenure :int) ->None:
 
     """
 
-    rate = rate/(12*100) #rate of interest 
-    tenure = tenure * 12 # no of months
-    emi = round((principal * rate * pow(1+rate,tenure))/(pow(1+rate,tenure)-1),0)
+    rate : float= rate/(12*100) #rate of interest 
+    tenure : float= tenure * 12 # no of months
+    emi :float = round((principal * rate * pow(1+rate,tenure))/(pow(1+rate,tenure)-1),0)
     print("Loan EMI: ",emi)
     
     # total amount to be paid after the mentioned tenure
-    total_amt = emi * tenure 
-    interest = round((total_amt - principal)*100/total_amt,0)
-    loan_amt = principal * 100/total_amt
+    total_amt : float = emi * tenure 
+    interest : float= round((total_amt - principal)*100/total_amt,0)
+    loan_amt: float= principal * 100/total_amt
     print("Total Payment: ",total_amt)
     print("Total Interest Payable: ",total_amt - principal)
     
@@ -43,11 +44,11 @@ def EMI(principal :int,rate :float,tenure :int) ->None:
     
     
     # required lists for plotting graph and table
-    interest_data=[]
-    principal_data=[]
-    balance_data=[]
-    month_no = []
-    cell_text=[]
+    interest_data :List[float]=[]
+    principal_data: List[float]=[]
+    balance_data: List[float]=[]
+    month_no : List[float]= []
+    cell_text :List[float]=[]
     columns = ["Month_No","Principal","Interest","Balance"]
     prev_bal = principal
     
