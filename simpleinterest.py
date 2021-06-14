@@ -64,7 +64,7 @@ def si(Principle :float,Rate :float,Time: int) ->None:
 
     plt.tight_layout()
     plt.show() 
-si(5000,5.5,5)
+#si(5000,5.5,5)
 
 
 

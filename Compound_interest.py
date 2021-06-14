@@ -132,4 +132,4 @@ def Compound_Interest(P :int,R :float,T :int,freq :str) -> None:
         ax2.set_title('Ratios')
         plt.tight_layout()
         plt.show() 
-Compound_Interest(20000,4.5,5,'quaterly')        
+#Compound_Interest(20000,4.5,5,'quaterly')        

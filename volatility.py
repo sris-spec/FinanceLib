@@ -34,4 +34,4 @@ def volatility(symbol :str, date :str) ->None:
     ax.set_ylabel("ATR")
     ax2.set_ylabel("Price")
     plt.show()
-volatility('GOOG','2020, 1, 1')
+#volatility('GOOG','2020, 1, 1')

@@ -169,7 +169,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
         ax3.set_ylabel("Interest")
         plt.tight_layout()
         plt.show()
-FD(50000,10.5,5,'Yearly')        
+#FD(50000,10.5,5,'Yearly')        
 
 
 

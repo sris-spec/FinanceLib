@@ -85,4 +85,4 @@ def EMI(principal :int,rate :float,tenure :int) ->None:
     table.scale(2,2)
     plt.tight_layout()
     plt.show()
-EMI(500000,10.5,2)    
+#EMI(500000,10.5,2)    
