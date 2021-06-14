@@ -3,7 +3,7 @@ import setuptools
 with open("README.md","r",encoding="utf-8") as f:
     long_description = f.read()
 
-REQUIRED =['matplotlib','numpy','pandas_datareader','datetime','pandas','mypy']
+REQUIRED =['matplotlib','numpy','pandas_datareader','pandas','mypy']
 
 setuptools.setup(
     name="FinanceLib",
