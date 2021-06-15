@@ -12,7 +12,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
      Rate(float) : Rate of Interest(in percentage)
      Time(int) : Number of years for which Fd is created
      freq(str) : The frequency in which compound interest should be calculated.
-                 The values can be from the list: ("Yearly","Quaterly","Monthly")
+                 The values can be from the list: ("annually","quaterly","monthly")
      
     Returns:
      Return type: void
@@ -31,7 +31,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
     fig, (ax1,ax2,ax3)=plt.subplots(3)
     fig.suptitle('Fixed Deposit')
        
-    if(freq== "Yearly"):
+    if(freq== "annually"):
 
         for i in range(Time):
             a=Principle*(1+Rate/100)**1
@@ -61,7 +61,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
 
         # Bar graph for Balance
         ax2.bar(year,closing_balance,color="#800000")
-        ax2.set_title("FD Amount over the Year(Yearly)")
+        ax2.set_title("FD Amount over the Year(Annually)")
         ax2.set_xlabel("Years")
         ax2.set_ylabel("Balance")
         
@@ -69,7 +69,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
 
         # Bar graph for interest 
         ax3.bar(year,interest_data)
-        ax3.set_title("Interest earned over the Year(Yearly)")
+        ax3.set_title("Interest earned over the Year(Annually)")
         ax3.set_xlabel("Years")
         ax3.set_xlabel("Interest")
 
@@ -79,7 +79,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
 
 
 
-    elif (freq == "Quaterly"):
+    elif (freq == "quaterly"):
 
         for i in range(Time):
             a=Principle*(1+Rate/400)**4
@@ -127,7 +127,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
 
 
 
-    elif (freq == "Monthly"):
+    elif (freq == "monthly"):
         for i in range(Time):
             a=Principle*(1+Rate/1200)**12
             year.append(i+1)
