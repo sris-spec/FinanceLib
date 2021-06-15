@@ -14,14 +14,14 @@
  * Measures and visualizes the Volatility of a Stock 
  ### Modules Included
    This Library mainly consists of three modules , namely :
-   ### 1. Interest:
+   ### 1. interest:
    This module is further subdivided into two basic interests modules which are widely used and are the building blocks of any financial calculations.
    * **SI :**
    SI (Simple Interest) module can be used to get the graphs showing how much interest and deposit is growing  as well as the ratio of amount deposited and the interest earned over it in the given time period and rate of interest. This module can be used to:
    
    * **CI:**
    CI (Compound Interest) module can be used to calculate interest on a loan or deposit based on both the initial principal and the accumulated interest from previous periods by taking principal amount, rate of interest(in %), time, compounding frequency as input. The output data is also represented through graph and pie chart.
-   ### 2. GeneralBanking:
+   ### 2. genBanking:
    This module is further subdivided into two most commonly used finance terms namely,
    * **FD:**
    FD (Fixed Deposit) is the most widely used finance term with respect to investment.This is used to get the detailed information about the amount deposited,interest earned,maturity amount based on yearly,quaterly or monthly cummulative basis through bar graphs and pie chart.
