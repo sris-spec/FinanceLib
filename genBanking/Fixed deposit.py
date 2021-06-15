@@ -55,7 +55,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
         myexplode=[0,0.2]
         ax1.pie(x,autopct ='%.1f',labels = mylabels,explode = myexplode,shadow=True)
         ax1.legend()
-        ax1.set_title("Yearly Cummulated")
+        ax1.set_title("Annually Cummulated")
         
 
 
