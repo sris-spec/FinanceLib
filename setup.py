@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Chahat Mittal,Harleen Kaur,Sristhi Sahoo',
-    author_email='financeLib@gmail.com',
+    author_email='financeLib027@gmail.com',
     python_requires='>=3.7',
     url='https://github.com/sris-spec/FinanceLib.git',
     install_requires=REQUIRED,
@@ -20,6 +20,7 @@ setuptools.setup(
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
+        'Operating System :: Microsoft :: Windows :: Windows 10'
     ],
     
 )

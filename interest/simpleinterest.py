@@ -1,6 +1,6 @@
 from typing import List
 import matplotlib.pyplot as plt
-def si(Principle :float,Rate :float,Time: int) ->None:
+def Simple_Interest(Principle :float,Rate :float,Time: int) ->None:
 
     """
      Calculates and Visualises Simple Interest
