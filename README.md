@@ -16,7 +16,7 @@
    This Library mainly consists of three modules , namely :
    ### 1. interest:
    This module is further subdivided into two basic interests modules which are widely used and are the building blocks of any financial calculations.
-   * **simpleinterest :**
+   * **Simple_Interest :**
    SI (Simple Interest) module can be used to get the graphs showing how much interest and deposit is growing  as well as the ratio of amount deposited and the interest earned over it in the given time period and rate of interest. This module can be used to:
    
    * **Compound_interest:**
