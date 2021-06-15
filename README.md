@@ -16,10 +16,10 @@
    This Library mainly consists of three modules , namely :
    ### 1. interest:
    This module is further subdivided into two basic interests modules which are widely used and are the building blocks of any financial calculations.
-   * **SI :**
+   * **simpleinterest :**
    SI (Simple Interest) module can be used to get the graphs showing how much interest and deposit is growing  as well as the ratio of amount deposited and the interest earned over it in the given time period and rate of interest. This module can be used to:
    
-   * **CI:**
+   * **Compound_Interest:**
    CI (Compound Interest) module can be used to calculate interest on a loan or deposit based on both the initial principal and the accumulated interest from previous periods by taking principal amount, rate of interest(in %), time, compounding frequency as input. The output data is also represented through graph and pie chart.
    ### 2. genBanking:
    This module is further subdivided into two most commonly used finance terms namely,
