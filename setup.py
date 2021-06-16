@@ -4,13 +4,13 @@ with open("README.md","r",encoding="utf-8") as f:
     long_description = f.read()
 
 REQUIRED =['matplotlib','numpy','pandas_datareader','pandas','mypy']
-LONG_DESCRIPTION='A basic python library for financial calculations and analysis with graphical representation'
+
 
 setuptools.setup(
     name="FinanceLib",
     version="0.0.1",
-    description='Financial Calculations',
-    long_description= LONG_DESCRIPTION,
+    description='A python library that consists of modules for different types of financial calculations and analysis.',
+    long_description= long_description,
     long_description_content_type='text/markdown',
     author='Chahat Mittal,Harleen Kaur,Sristhi Sahoo',
     author_email='financeLib027@gmail.com',
