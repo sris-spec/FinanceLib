@@ -36,9 +36,7 @@
    Volatility is a statistical measure of the dispersion of returns for a given security or market index. In most cases, the higher the volatility, the riskier the security. Volatility is often measured as either the standard deviation or variance between returns from that same security or market index.
    Here we will calculate the same by using the ATR value.
    The average true range (ATR) is a market volatility indicator used in technical analysis.It is typically derived from the 14-day simple moving average of a series of true range indicators.
-  
 
-  ### Installation
   ### Licence
   All the codes included in this packaging library is licensed under MIT License.
    
