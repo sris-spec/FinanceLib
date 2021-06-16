@@ -20,7 +20,7 @@ setuptools.setup(
     license='MIT',
     keywords =['python', 'Finance with python', 'interest', 'analysis', 'general banking' , 'visualising finance','stock','yahoo finance'],
     classifiers=[
-        "Development Status :: 1 - Developing",
+        "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",

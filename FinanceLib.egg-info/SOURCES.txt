@@ -1,0 +1,7 @@
+README.md
+setup.py
+FinanceLib.egg-info/PKG-INFO
+FinanceLib.egg-info/SOURCES.txt
+FinanceLib.egg-info/dependency_links.txt
+FinanceLib.egg-info/requires.txt
+FinanceLib.egg-info/top_level.txt
