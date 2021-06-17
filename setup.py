@@ -8,7 +8,7 @@ REQUIRED =['matplotlib','numpy','pandas_datareader','pandas','mypy']
 
 setuptools.setup(
     name="FinanceLib",
-    version="0.0.1",
+    version="0.0.2",
     description='A python library that consists of modules for different types of financial calculations and analysis.',
     long_description= long_description,
     long_description_content_type='text/markdown',
