@@ -8,7 +8,7 @@ REQUIRED =['matplotlib','numpy','pandas_datareader','pandas','mypy']
 
 setuptools.setup(
     name="FinanceLib",
-    version="0.0.2",
+    version="0.0.3",
     description='A python library that consists of modules for different types of financial calculations and analysis.',
     long_description= long_description,
     long_description_content_type='text/markdown',
@@ -18,6 +18,8 @@ setuptools.setup(
     url='https://github.com/sris-spec/FinanceLib.git',
     install_requires=REQUIRED,
     license='MIT',
+    package_dir = {"": "src"},
+    packages = setuptools.find_packages(where = "src"),
     keywords =['python', 'Finance with python', 'interest', 'analysis', 'general banking' , 'visualising finance','stock','yahoo finance'],
     classifiers=[
         
