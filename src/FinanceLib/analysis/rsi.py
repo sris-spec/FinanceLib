@@ -14,7 +14,7 @@ def rsi(symbol :str ,name :str, date :str) -> None :
     Returns:
         Return type: void  
     Example:
-        rsi('GOOG','Google','2020, 1, 1')     
+        rsi('GOOG','Google','2020,01,01')     
 
     """
     ticker : str = pdr.get_data_yahoo(symbol, date)
@@ -38,4 +38,4 @@ def rsi(symbol :str ,name :str, date :str) -> None :
     ax2.axhline(70, color='r', linestyle='--')
     ax2.set_ylabel('RSI')
     plt.show()
-#rsi('GOOG','Google','2020, 1, 1')
+#rsi('GOOG','Google','2020,01,01')
