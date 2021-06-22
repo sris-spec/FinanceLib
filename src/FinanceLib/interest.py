@@ -75,7 +75,7 @@ def compound_interest(P :int,R :float,T :int,freq :str) -> None:
 
      Parameters:
         P(float) : Principal amount
-        R(float) : Rate of interest
+        R(float) : Rate of interest (in percentage)
         T(int) : Time
         freq(str) : The frequency in which compound interest should be calculated. 
                     The values can be from the list: ('annually','semiannually','quaterly','monthly')
