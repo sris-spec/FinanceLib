@@ -8,7 +8,7 @@ def EMI(principal :int,rate :float,tenure :int) ->None:
 
     Parameters:
       principal(float) : principal amount 
-      rate(float) : Rate of interest
+      rate(float) : Rate of interest(in percentage)
       tenure(int) : number of years for which EMI has to be calculated
 
     Return:
@@ -104,7 +104,7 @@ def FD(Principle :int,Rate :float,Time :int,freq :str) ->None:
      Return type: void
       
     Example:
-     FD(50000,10.5,5,Yearly)
+     FD(50000,10.5,5,'annually')
      
      """
      
