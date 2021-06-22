@@ -5,7 +5,7 @@ with open("README.md","r",encoding="utf-8") as f:
 
 setuptools.setup(
     name="FinanceLib",
-    version="0.0.9",
+    version="0.0.2",
     description='A python library that consists of modules for different types of financial calculations and analysis.',
     long_description= long_description,
     long_description_content_type='text/markdown',
@@ -13,7 +13,7 @@ setuptools.setup(
     author_email='financeLib027@gmail.com',
     python_requires='>=3.7',
     url='https://github.com/sris-spec/FinanceLib.git',
-    install_requires=['matplotlib>=3.4.2','numpy>=1.19.5','pandas_datareader>=0.9.0','pandas>=1.2.4 ','mypy>=3.10'],
+    install_requires=['matplotlib','numpy','pandas_datareader','pandas','mypy'],
     license='MIT',
     package_dir = {"": "src"},
     packages = setuptools.find_packages(where = "src"),
