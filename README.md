@@ -14,53 +14,44 @@ FinanceLib is easy-to-use Python library that has modules for representing the v
  
  ### Modules Included
    This Library mainly consists of three modules , namely :
-   ### 1. [**analysis**](https://github.com/sris-spec/FinanceLib/tree/master/src/FinanceLib/analysis):
+   ### 1. [**analysis**](https://github.com/sris-spec/FinanceLib/blob/master/src/FinanceLib/analysis.py):
    This module is further subdivided into two very important stock analysis  fuctions which are widely used in financial risk management.
-   * Relative Strength Index (RSI)
-   * Volatility
+   * Relative Strength Index (Function name - rsi)
+   * Volatility (Function name - volatility)
    > Sample Code
    > ```python
-   > from FinanceLib.analysis import volatility as vt
-   > vt.volatility('GOOG','2020,01,01') 
+   > import FinanceLib.analysis as anl
+   > anl.rsi('GOOG','Google','2020,01,01') 
    > ```
    
-   ### 2. [**genBanking**](https://github.com/sris-spec/FinanceLib/tree/master/src/FinanceLib/genBanking):
+   ### 2. [**genBanking**](https://github.com/sris-spec/FinanceLib/blob/master/src/FinanceLib/genBanking.py):
    This module is further subdivided into two most commonly used finance terms namely,
-   * Fixed Deposit (FD)
-   * Equated Monthly Interest (EMI)
+   * Equated Monthly Interest (Function name - EMI)
+   * * Fixed Deposit (Function name - FD)
    > Sample Code
    > ```python
-   > from FinanceLib.genBanking import EMI as emi
-   > emi.EMI(500000,10.5,2)
+   > import FinanceLib.genBanking as gen
+   > gen.EMI(500000,10.5,2)
    > ```
 
-   ### 3. [**interest**](https://github.com/sris-spec/FinanceLib/tree/master/src/FinanceLib/interest):
+   ### 3. [**interest**](https://github.com/sris-spec/FinanceLib/blob/master/src/FinanceLib/interest.py):
    This module is further subdivided into two basic interests calculations which are widely used and are the building blocks of any financial calculations.
-   * Simple Interest
-   * Compound Interest
+   * Simple Interest (Function name - simple_interest)
+   * Compound Interest (Function name - compound_interest)
    > Sample Code
    >```python
-   >from FinanceLib.interest import Compound_interest as ci
-   >ci.Compound_Interest(20000,5,10,'annually')
+   >import FinanceLib.interest as inter
+   >inter.simple_interest(5000,5.5,5)
    >```
    
   ### Package Structure
   ```bash
-  ├── FinanceLib
-│   ├── analysis
-│   │   ├── __init__.py
-│   │   ├── rsi.py
-│   │   ├── volatility.py
-│   ├── genBanking
-│   │   ├── __init__.py
-│   │   ├── EMI.py
-│   │   ├── Fixed Deposit.py
-│   └── interest
-│       ├── __init__.py
-│       ├── simpleinterest.py
-│       └── Compound_interest.py
-└── __init__.py    
-  ```
+  FinanceLib
+      __init__.py
+      analysis.py
+      genBanking.py
+      interest.py
+   ```
   ### Installation
   ```bash
   pip install FinanceLib==0.0.2
