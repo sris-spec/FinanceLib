@@ -1,7 +1,7 @@
 # FinanceLib
 
 ## Package Overview
-FinanceLib is easy-to-use Python library that has modules for representing the visualizations and analysis of commonly used finance related terms through graphs and charts.
+FinanceLib is easy-to-use Python library that has modules for representing the visualisations and analysis of commonly used finance related terms through graphs and charts.
   
 ## Table of Contents
  ### Usage
@@ -9,7 +9,7 @@ FinanceLib is easy-to-use Python library that has modules for representing the v
  * Calculating the interest earned over the amount deposited.
  * Representation of change of Interest,Balance with respect to years through line or bar graphs.
  * Representation of ratios between Deposit and interest applied over it through pie chart.
- * Calculating and visvalisition of Relative stock index.
+ * Calculating and visualisition of Relative stock index.
  * Measures and visualizes the Volatility of a Stock 
  
  ### Modules Included
@@ -54,7 +54,7 @@ FinanceLib is easy-to-use Python library that has modules for representing the v
    ```
   ### Installation
   ```bash
-  pip install FinanceLib==0.0.2
+  pip install FinanceLib
   ```
   ### Licence
   All the codes included in this packaging library is licensed under MIT License.
